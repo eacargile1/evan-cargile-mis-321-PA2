@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTS — Legendary Training Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+    <nav class="site-nav" id="site-nav">
+        <div class="site-nav-inner">
+            <a href="/" class="snav-brand">
+                <span class="snav-logo">LTS</span>
+                <span class="snav-tagline">Legendary Training Services</span>
+            </a>
+            <div class="snav-links">
+                <a href="/" class="snav-link snav-active">Home</a>
+                <a href="/browse.html" class="snav-link">Browse Sessions</a>
+                <a href="/calendar.html" class="snav-link">Calendar</a>
+                <a href="#packages" class="snav-link">Packages &amp; Deals</a>
+                <a href="/browse.html" class="snav-link" id="nav-my-bookings-link" hidden>My Bookings</a>
+            </div>
+            <div class="snav-actions">
+                <a href="/login.html" class="snav-signin" id="nav-login">Sign In</a>
+                <span class="snav-user" id="header-user" hidden></span>
+                <a href="#" class="snav-signout" id="nav-logout" hidden>Sign Out</a>
+                <a href="/browse.html" class="snav-book">Book a Session</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-body">
+            <div class="hero-text">
+                <span class="hero-eyebrow">Certified Pet Training</span>
+                <h1 class="hero-headline">Train smarter.<br><span class="hero-accent">Bond deeper.</span></h1>
+                <p class="hero-sub">Professional dog training classes and private sessions. Serving all breeds, all skill levels — from first-time puppy owners to advanced obedience.</p>
+                <div class="hero-btns">
+                    <a href="/browse.html" class="hbtn hbtn-primary">Browse Sessions</a>
+                    <a href="#how-it-works" class="hbtn hbtn-ghost">How It Works</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating search bar at bottom of hero -->
+        <div class="hero-search">
+            <div class="hero-search-inner">
+                <div class="hs-group">
+                    <label for="w-type">Session Type</label>
+                    <select id="w-type">
+                        <option value="">All types</option>
+                        <option value="0">Group Class</option>
+                        <option value="1">Individual</option>
+                    </select>
+                </div>
+                <div class="hs-divider"></div>
+                <div class="hs-group">
+                    <label for="w-breed">Dog Breed</label>
+                    <input type="text" id="w-breed" placeholder="Any breed">
+                </div>
+                <div class="hs-divider"></div>
+                <div class="hs-group">
+                    <label for="w-date">Starting From</label>
+                    <input type="date" id="w-date">
+                </div>
+                <button class="hs-btn" id="w-find">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    Find Sessions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ STATS STRIP ═══════════════ -->
+    <div class="stats-strip">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-num">50<span class="stat-plus">+</span></span>
+                <span class="stat-label">Sessions Monthly</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">All</span>
+                <span class="stat-label">Breeds Welcome</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">5<span class="stat-plus">★</span></span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">100<span class="stat-plus">%</span></span>
+                <span class="stat-label">Certified Trainers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ SERVICES SECTION ═══════════════ -->
+    <section class="services-section">
+        <div class="services-inner">
+            <div class="section-label">Our Programs</div>
+            <h2 class="section-title">Find Your Perfect Program</h2>
+            <p class="section-desc">Whether your dog needs basic obedience or advanced training, we have a program built for every stage of their journey.</p>
+
+            <div class="services-grid">
+                <a href="/browse.html?type=0" class="svc-card">
+                    <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&auto=format&fit=crop&q=75')"></div>
+                    <div class="svc-body">
+                        <span class="svc-tag">Group</span>
+                        <h3>Group Classes</h3>
+                        <p>Train alongside other dogs in a structured, social environment. Great for puppies, obedience, and breed-specific skills.</p>
+                        <span class="svc-link">Browse Classes &rsaquo;</span>
+                    </div>
+                </a>
+
+                <a href="/browse.html?type=1" class="svc-card svc-card--featured">
+                    <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=800&auto=format&fit=crop&q=75')"></div>
+                    <div class="svc-body">
+                        <span class="svc-tag svc-tag--orange">Private</span>
+                        <h3>Individual Sessions</h3>
+                        <p>One-on-one attention from a certified trainer, fully tailored to your dog's temperament, history, and your specific goals.</p>
+                        <span class="svc-link">Book a Session &rsaquo;</span>
+                    </div>
+                </a>
+
+                <a href="#packages" class="svc-card">
+                    <div class="svc-img" style="background-image:url('https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&auto=format&fit=crop&q=75')"></div>
+                    <div class="svc-body">
+                        <span class="svc-tag svc-tag--purple">Bundle</span>
+                        <h3>Training Packages</h3>
+                        <p>Commit to a bundle and save. Package deals give your dog the consistency they need for lasting behavioral change.</p>
+                        <span class="svc-link">View Packages &rsaquo;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+    <section class="how-section" id="how-it-works">
+        <div class="how-inner">
+            <div class="how-text-col">
+                <div class="section-label section-label--light">Simple Process</div>
+                <h2 class="section-title section-title--light">Getting started is easy</h2>
+                <p class="section-desc section-desc--light">From finding a session to your first class, the whole process takes just a few minutes. No paperwork. No hassle.</p>
+                <a href="/browse.html" class="how-cta">Browse Available Sessions &rsaquo;</a>
+            </div>
+            <div class="how-steps-col">
+                <div class="how-step">
+                    <div class="step-num">01</div>
+                    <div class="step-body">
+                        <h3>Find a Session</h3>
+                        <p>Browse upcoming group classes and individual slots. Filter by date, session type, or your dog's breed.</p>
+                    </div>
+                </div>
+                <div class="how-step">
+                    <div class="step-num">02</div>
+                    <div class="step-body">
+                        <h3>Book Instantly</h3>
+                        <p>Reserve your spot in seconds — no phone calls needed. Just fill in your contact info and confirm.</p>
+                    </div>
+                </div>
+                <div class="how-step">
+                    <div class="step-num">03</div>
+                    <div class="step-body">
+                        <h3>Train Together</h3>
+                        <p>Show up and work with your trainer to build real, lasting skills — and a stronger bond with your dog.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PACKAGES ═══════════════ -->
+    <section id="packages" class="packages-section">
+        <div class="packages-inner">
+            <div class="section-label">Save More</div>
+            <h2 class="section-title">Training Packages &amp; Deals</h2>
+            <p class="section-desc">Purchase a bundle upfront and coordinate with your trainer to schedule each session on your timeline.</p>
+            <div id="packages-list" class="pkg-grid"></div>
+            <p class="pkg-browse-note">Prefer a single session? <a href="/browse.html" class="inline-link">Browse all available sessions &rsaquo;</a></p>
+        </div>
+    </section>
+
+    <!-- Package booking form -->
+    <div class="packages-form-wrap">
+        <div class="packages-inner">
+            <section id="book" hidden>
+                <h2>Purchase Package</h2>
+                <div id="booking-form-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ═══════════════ CTA BANNER ═══════════════ -->
+    <section class="cta-banner">
+        <div class="cta-bg"></div>
+        <div class="cta-inner">
+            <h2>Ready to get started?</h2>
+            <p>Find an upcoming session today and take the first step toward a better-behaved, happier dog.</p>
+            <a href="/browse.html" class="cta-btn">Browse All Sessions</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SPONSORED ═══════════════ -->
+    <div class="main-content">
+        <aside class="sponsored-bar" aria-label="Sponsored">
+            <span class="sponsored-label">Sponsored</span>
+            <div class="ad-items">
+                <a href="https://www.royalcanin.com" target="_blank" class="ad-item" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=120&h=120&auto=format&fit=crop&q=80" alt="Royal Canin dog food">
+                    <div class="ad-text">
+                        <strong>Royal Canin</strong>
+                        <span>Precision nutrition for every breed</span>
+                    </div>
+                </a>
+                <a href="https://www.hillspet.com" target="_blank" class="ad-item" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1601758124096-519c0f0b44c1?w=120&h=120&auto=format&fit=crop&q=80" alt="Hill's Science Diet">
+                    <div class="ad-text">
+                        <strong>Hill's Science Diet</strong>
+                        <span>Vet recommended dog food</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">LTS</div>
+                <p>Legendary Training Services<br>Professional pet training for every breed and every stage.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigate</h4>
+                <a href="/">Home</a>
+                <a href="/browse.html">Browse Sessions</a>
+                <a href="/calendar.html">Calendar</a>
+                <a href="#packages">Packages</a>
+            </div>
+            <div class="footer-links">
+                <h4>Account</h4>
+                <a href="/login.html">Sign In</a>
+                <a href="/login.html">Create Account</a>
+                <a href="/browse.html">My Bookings</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Legendary Training Services &nbsp;&bull;&nbsp; 321 Consulting &nbsp;&bull;&nbsp; UA MIS Spring 2026</p>
+        </div>
+    </footer>
+
+    <script src="/js/home.js"></script>
+    <script>
+        document.getElementById('w-find').addEventListener('click', () => {
+            const type  = document.getElementById('w-type').value;
+            const breed = document.getElementById('w-breed').value.trim();
+            const date  = document.getElementById('w-date').value;
+            const p = new URLSearchParams();
+            if (type)  p.set('type', type);
+            if (breed) p.set('breed', breed);
+            if (date)  p.set('from', date);
+            window.location.href = '/browse.html' + (p.toString() ? '?' + p : '');
+        });
+    </script>
+</body>
+</html>

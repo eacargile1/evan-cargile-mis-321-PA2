@@ -1,0 +1,98 @@
+.cal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cal-header button {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.cal-header h2 { margin: 0; }
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cal-day-header {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cal-day {
+    background: white;
+    min-height: 80px;
+    padding: 0.4rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.cal-day:hover { background: #f0f8ff; }
+
+.cal-day.other-month { background: #fafafa; color: #bbb; }
+
+.cal-day.today { background: #fff3cd; }
+
+.cal-day .day-num {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cal-event {
+    font-size: 0.7rem;
+    background: #27ae60;
+    color: white;
+    border-radius: 2px;
+    padding: 1px 3px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cal-event.class { background: #3498db; }
+.cal-event.full { background: #95a5a6; }
+
+.cal-day-detail {
+    margin-top: 1rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.cal-day-detail h3 { margin: 0 0 0.75rem; }
+
+.detail-session {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-session:last-child { border-bottom: none; }
+
+.detail-session a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+}

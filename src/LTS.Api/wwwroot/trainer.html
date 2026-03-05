@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTS Trainer Portal</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/trainer.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a href="/" class="snav-brand">
+                <span class="snav-logo">LTS</span>
+                <span class="snav-tagline">Trainer Portal</span>
+            </a>
+            <div class="snav-actions" style="margin-left:auto">
+                <a href="/" class="snav-signin">← Back to Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="main-nav">
+        <a href="#profile" class="nav-link tab-nav" data-section="profile">My Profile</a>
+        <a href="#availability" class="nav-link tab-nav" data-section="availability">My Sessions</a>
+        <a href="#packages-section" class="nav-link tab-nav" data-section="packages-section">Packages</a>
+        <a href="#my-reviews" class="nav-link tab-nav" data-section="my-reviews">Reviews</a>
+    </nav>
+
+    <main class="main-content">
+
+        <section id="profile" class="trainer-section section">
+            <h2>My Profile</h2>
+            <div id="profile-form-container"></div>
+        </section>
+
+        <section id="availability" class="trainer-section section" hidden>
+            <h2>Add Session</h2>
+            <div class="add-slot-form">
+                <input type="date" id="slot-date" required>
+                <input type="time" id="slot-start" required>
+                <input type="time" id="slot-end" required>
+                <select id="slot-type">
+                    <option value="1">Individual</option>
+                    <option value="0">Class</option>
+                </select>
+                <input type="text" id="slot-title" placeholder="Title">
+                <input type="number" id="slot-price" placeholder="Price ($)" min="30" step="5" value="50">
+                <input type="number" id="slot-min" placeholder="Min enrollment" min="1" value="1">
+                <input type="number" id="slot-cap" placeholder="Capacity" min="1" value="1">
+                <input type="text" id="slot-breeds" placeholder="Allowed breeds (comma-sep, blank=all)">
+                <button type="button" id="slot-add">Add Session</button>
+            </div>
+            <h3>My Upcoming Sessions</h3>
+            <div id="my-offerings"></div>
+        </section>
+
+        <section id="packages-section" class="trainer-section section" hidden>
+            <h2>My Packages</h2>
+            <div class="add-slot-form">
+                <input type="text" id="pkg-title" placeholder="Package title">
+                <input type="text" id="pkg-desc" placeholder="Description (optional)">
+                <input type="number" id="pkg-sessions" placeholder="# of sessions" min="2" value="5">
+                <input type="number" id="pkg-price" placeholder="Total price ($)" min="30" step="10" value="200">
+                <button type="button" id="pkg-add">Add Package</button>
+            </div>
+            <div id="my-packages"></div>
+        </section>
+
+        <section id="my-reviews" class="trainer-section section" hidden>
+            <h2>My Reviews</h2>
+            <div id="reviews-output"></div>
+        </section>
+
+    </main>
+
+    <script src="/js/trainer.js"></script>
+</body>
+</html>

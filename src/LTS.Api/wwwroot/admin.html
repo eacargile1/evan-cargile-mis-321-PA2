@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTS Admin</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a href="/" class="snav-brand">
+                <span class="snav-logo">LTS</span>
+                <span class="snav-tagline">Admin Portal</span>
+            </a>
+            <div class="snav-actions" style="margin-left:auto">
+                <a href="/" class="snav-signin">← Back to Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="main-nav">
+        <a href="#bookings" class="nav-link tab-nav" data-section="bookings">Bookings</a>
+        <a href="#revenue" class="nav-link tab-nav" data-section="revenue">Revenue</a>
+        <a href="#business" class="nav-link tab-nav" data-section="business">Business</a>
+        <a href="#offerings-rpt" class="nav-link tab-nav" data-section="offerings-rpt">Offerings</a>
+        <a href="#pets-rpt" class="nav-link tab-nav" data-section="pets-rpt">Pets</a>
+        <a href="#flagged" class="nav-link tab-nav" data-section="flagged">Flagged Reviews</a>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- Bookings -->
+        <section id="bookings" class="admin-section section">
+            <h2>Training Bookings</h2>
+            <div class="filters">
+                <input type="date" id="bk-from"> to <input type="date" id="bk-to">
+                <select id="bk-type"><option value="">All types</option><option value="0">Class</option><option value="1">Individual</option></select>
+                <button type="button" id="bk-refresh">Load</button>
+            </div>
+            <div id="bookings-table" class="table-wrap"></div>
+        </section>
+
+        <!-- Revenue Report -->
+        <section id="revenue" class="admin-section section" hidden>
+            <h2>Expected Revenue Report</h2>
+            <div class="filters">
+                <input type="date" id="rev-from"> to <input type="date" id="rev-to">
+                <button type="button" id="rev-generate">Generate</button>
+            </div>
+            <div id="revenue-output"></div>
+        </section>
+
+        <!-- Business Report -->
+        <section id="business" class="admin-section section" hidden>
+            <h2>Business Report</h2>
+            <div class="filters">
+                <input type="date" id="bus-from"> to <input type="date" id="bus-to">
+                <button type="button" id="bus-generate">Generate</button>
+            </div>
+            <div id="business-output"></div>
+        </section>
+
+        <!-- Trainer Offerings Report -->
+        <section id="offerings-rpt" class="admin-section section" hidden>
+            <h2>Trainer Offerings Report</h2>
+            <div class="filters">
+                <input type="date" id="off-from"> to <input type="date" id="off-to">
+                <button type="button" id="off-generate">Generate</button>
+            </div>
+            <div id="offerings-rpt-output"></div>
+        </section>
+
+        <!-- Pet Report -->
+        <section id="pets-rpt" class="admin-section section" hidden>
+            <h2>Pet Report</h2>
+            <div class="filters">
+                <input type="text" id="pet-breed-filter" placeholder="Filter by breed...">
+                <button type="button" id="pets-load">Load</button>
+            </div>
+            <div id="pets-output"></div>
+        </section>
+
+        <!-- Flagged Reviews -->
+        <section id="flagged" class="admin-section section" hidden>
+            <h2>Flagged Reviews <small>(Admin Only)</small></h2>
+            <button type="button" id="flagged-load">Load Flagged</button>
+            <div id="flagged-output"></div>
+        </section>
+
+    </main>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

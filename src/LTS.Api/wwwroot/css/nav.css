@@ -1,0 +1,174 @@
+/* Ensure [hidden] always wins over display rules */
+[hidden] { display: none !important; }
+
+/* ── LTS Site Navigation ── */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: #0c1e1e;
+    color: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.45);
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+}
+
+.site-nav a,
+.site-nav a:link,
+.site-nav a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 64px;
+    gap: 1.5rem;
+}
+
+/* Brand */
+.snav-brand {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 0.1rem;
+    line-height: 1;
+    color: #fff;
+}
+.snav-logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+.snav-tagline {
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+}
+
+/* Links */
+.snav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.1rem;
+    flex: 1;
+}
+.snav-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+}
+.snav-link:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.snav-active     { color: #fff; font-weight: 600; background: rgba(255,255,255,0.1); }
+
+/* Actions */
+.snav-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+.snav-signin {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.45rem 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+}
+.snav-signin:hover { color: #fff; background: rgba(255,255,255,0.08); }
+
+.snav-user {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.45rem 0.5rem;
+    white-space: nowrap;
+}
+
+.snav-signout {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+}
+.snav-signout:hover { color: #fff; border-color: rgba(255,255,255,0.35); }
+
+.snav-book {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+    background: #c8693a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background 0.15s, transform 0.1s;
+}
+.snav-book:hover { background: #a8542e; transform: translateY(-1px); }
+
+/* Portal nav tabs (admin / trainer pages) */
+.portal-nav {
+    background: #0c1e1e;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.portal-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0 1.5rem;
+}
+.portal-tab {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.85rem 1rem;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+    cursor: pointer;
+}
+.portal-tab:hover  { color: #fff; border-bottom-color: rgba(255,255,255,0.3); }
+.portal-tab.active { color: #fff; border-bottom-color: #c8693a; }
+
+@media (max-width: 700px) {
+    .snav-tagline { display: none; }
+    .snav-links   { display: none; }
+    .snav-signin  { display: none; }
+    .site-nav-inner { gap: 0.75rem; }
+}

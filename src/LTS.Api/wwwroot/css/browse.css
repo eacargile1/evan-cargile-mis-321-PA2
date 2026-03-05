@@ -1,0 +1,104 @@
+/* ── Browse page section headers ── */
+.section-box-header {
+    background: linear-gradient(135deg, #0f2828 0%, #1d5050 100%);
+    border-radius: 10px;
+    padding: 1.4rem 1.75rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #c8693a;
+}
+
+.section-box-header--orange {
+    background: linear-gradient(135deg, #3a1800 0%, #7a3510 100%);
+}
+
+.sbh-text h2 {
+    margin: 0 0 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.sbh-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+}
+
+/* ── Browse hero ── */
+.browse-hero {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #c8693a;
+    overflow: hidden;
+}
+
+.browse-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1601758124096-519c0f0b44c1?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+}
+
+.browse-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 25, 25, 0.68);
+}
+
+.browse-hero-body {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.browse-hero-text {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    max-width: 600px;
+}
+
+.browse-hero-eyebrow {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 0.9rem;
+}
+
+.browse-hero-heading {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.browse-hero-sub {
+    margin: 0;
+    font-size: 0.975rem;
+    color: #fff;
+    line-height: 1.65;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}

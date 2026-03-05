@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTS — Calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a href="/" class="snav-brand">
+                <span class="snav-logo">LTS</span>
+                <span class="snav-tagline">Legendary Training Services</span>
+            </a>
+            <div class="snav-links">
+                <a href="/" class="snav-link">Home</a>
+                <a href="/browse.html" class="snav-link">Browse Sessions</a>
+                <a href="/calendar.html" class="snav-link snav-active">Calendar</a>
+                <a href="/#packages" class="snav-link">Packages &amp; Deals</a>
+            </div>
+            <div class="snav-actions">
+                <a href="/login.html" class="snav-signin">Sign In</a>
+                <a href="/browse.html" class="snav-book">Book a Session</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="cal-header">
+                <button id="prev-month">&#8249;</button>
+                <h2 id="cal-title"></h2>
+                <button id="next-month">&#8250;</button>
+            </div>
+            <div id="cal-grid" class="cal-grid"></div>
+            <div id="cal-day-detail" class="cal-day-detail" hidden>
+                <h3 id="detail-date"></h3>
+                <div id="detail-sessions"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  @page { margin: 1in; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    color: #000;
+    max-width: 7.5in;
+    margin: 1in auto;
+    line-height: 1.5;
+  }
+  .cover {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .cover h1 {
+    font-size: 24pt;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  .cover p {
+    margin: 4px 0;
+    font-size: 11pt;
+  }
+  h2 {
+    font-size: 16pt;
+    font-weight: normal;
+    margin-top: 36px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin: 8px 0;
+  }
+  ul {
+    margin: 8px 0 8px 24px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .page-break {
+    page-break-before: always;
+    border-top: none;
+  }
+  .page-num {
+    margin-top: 60px;
+    font-size: 10pt;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 10.5pt;
+  }
+  th {
+    border: 1px solid #000;
+    padding: 6px 10px;
+    text-align: left;
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  td {
+    border: 1px solid #000;
+    padding: 6px 10px;
+    vertical-align: top;
+  }
+  .sig-table td {
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <h1>Statement of Work</h1>
+  <p>By 321 Consulting</p>
+  <p>For Legendary Training Services (LTS)</p>
+  <p>March 2026</p>
+  <p>SOW #LTS-2026-01</p>
+</div>
+
+<!-- Introduction -->
+<h2>Introduction</h2>
+<p>321 Consulting will design, develop, and deliver a full-stack web-based scheduling and booking system for Legendary Training Services (LTS). The system will replace the client's existing manual scheduling process and provide a centralized platform for trainers, pet owners, and administrators to manage training sessions, bookings, and business reporting.</p>
+
+<!-- Purpose and Objectives -->
+<h2>Purpose and Objectives</h2>
+<p>The purpose of this project is to automate LTS's scheduling and booking operations, improving efficiency for trainers and the experience for pet owner customers. The project objectives are to:</p>
+<ul>
+  <li>Deliver a fully functional web application accessible to three user roles: Admin, Trainer, and Pet Owner.</li>
+  <li>Allow trainers to create and manage group classes and individual training sessions with pricing, capacity limits, and minimum enrollment thresholds.</li>
+  <li>Allow pet owners to browse, filter, and book available sessions and training packages online.</li>
+  <li>Provide administrators with a reporting suite covering bookings, revenue, trainer payouts, offerings, and customer data.</li>
+  <li>Enforce a 3% platform fee on each booking with automatic trainer payout calculation at 97%.</li>
+</ul>
+
+<!-- Tasks -->
+<h2>Tasks</h2>
+<p>321 Consulting will complete the following tasks as part of this project:</p>
+<ul>
+  <li>Design and implement a REST API backend using ASP.NET Core 9 with Entity Framework Core and SQLite.</li>
+  <li>Build a frontend using HTML, CSS, and JavaScript with role-specific portals for Admin, Trainer, and Pet Owner.</li>
+  <li>Implement JWT-based authentication and BCrypt password hashing for all user accounts.</li>
+  <li>Develop a Browse Sessions page with filtering by session type, breed, and date range.</li>
+  <li>Build a monthly calendar view displaying all available sessions with color-coded indicators.</li>
+  <li>Implement a trainer review and rating system with admin moderation (flag/unflag).</li>
+  <li>Develop all six admin reports: Bookings, Revenue, Business (payouts + repeat customers), Offerings, Pets, and Flagged Reviews.</li>
+  <li>Seed the database with realistic sample data for demonstration and testing purposes.</li>
+  <li>Produce all required project documentation: User Stories, Requirements Traceability Matrix, Test Plan, Test Logs, and this Statement of Work.</li>
+  <li>Execute the test plan, log results, and resolve identified defects prior to handoff.</li>
+</ul>
+
+<p>The following tasks are not included in this project's scope and will not be performed by 321 Consulting:</p>
+<ul>
+  <li>Live payment processing or integration with a payment gateway (e.g., Stripe, PayPal).</li>
+  <li>SMS or email notifications for bookings, cancellations, or reminders.</li>
+  <li>Native iOS or Android mobile applications.</li>
+  <li>Integration with external CRM, accounting, or point-of-sale systems.</li>
+  <li>Automated session cancellation when minimum enrollment is not met.</li>
+</ul>
+
+<div class="page-num">Page 1</div>
+
+<!-- Page 2 -->
+<div class="page-break"></div>
+
+<h2>Timeline</h2>
+<p>The project will be completed across six phases over an estimated 8 to 12 weeks:</p>
+<table>
+  <tr><th>Phase</th><th>Activities</th><th>Duration</th></tr>
+  <tr><td>1 - Discovery and Design</td><td>Requirements gathering, user stories, wireframes, SOW finalization</td><td>1-2 weeks</td></tr>
+  <tr><td>2 - Backend Development</td><td>Database design, EF Core models, REST API endpoints, authentication, data seeding</td><td>2-3 weeks</td></tr>
+  <tr><td>3 - Frontend Development</td><td>All three role portals, navigation, browse/filter functionality, calendar view</td><td>2-3 weeks</td></tr>
+  <tr><td>4 - Reports and Polish</td><td>Admin reports, review system, advertising, UI refinement, responsive design</td><td>1 week</td></tr>
+  <tr><td>5 - Testing</td><td>Test plan execution, defect identification and resolution, test log documentation</td><td>1-2 weeks</td></tr>
+  <tr><td>6 - Delivery and Handoff</td><td>Final documentation, deployment, client walkthrough</td><td>1 week</td></tr>
+</table>
+
+<!-- Deliverables -->
+<h2>Deliverables</h2>
+<p>321 Consulting will provide the following deliverables upon project completion:</p>
+<ul>
+  <li>Statement of Work (this document)</li>
+  <li>User Stories with acceptance criteria for all three user roles</li>
+  <li>Requirements Traceability Matrix mapping requirements to test cases</li>
+  <li>Test Plan outlining testing strategy and sample test cases</li>
+  <li>Test Logs with results for all executed test cases</li>
+  <li>Fully functional LTS web application (source code and runnable build)</li>
+</ul>
+
+<!-- Acceptance Criteria -->
+<h2>Acceptance Criteria</h2>
+<p>The project will be accepted when all of the following conditions are verified:</p>
+<ul>
+  <li>Pet owners can browse, filter, and book sessions; fully booked sessions cannot be booked.</li>
+  <li>Trainers can create profiles, schedule sessions with a minimum price of $30, create packages, and view reviews.</li>
+  <li>The 3% platform fee and 97% trainer payout are calculated correctly across all reports.</li>
+  <li>Administrators can view all six reports with accurate data and correct filtering behavior.</li>
+  <li>Authentication is enforced; all protected pages redirect unauthorized users to the login page.</li>
+  <li>The session calendar renders correctly with monthly navigation and day-level session detail.</li>
+  <li>Test logs show a minimum of 35 executed test cases with a pass rate of 95% or higher.</li>
+</ul>
+
+<div class="page-num">Page 2</div>
+
+<!-- Page 3 -->
+<div class="page-break"></div>
+
+<!-- Roles and Responsibilities -->
+<h2>Roles and Responsibilities</h2>
+<p>Legendary Training Services (Client) agrees to:</p>
+<ul>
+  <li>Provide and approve business requirements prior to development.</li>
+  <li>Clarify pricing rules, breed policies, enrollment minimums, and edge cases in a timely manner.</li>
+  <li>Review and approve wireframes and major deliverables within 3 business days of submission.</li>
+</ul>
+
+<p>321 Consulting (Vendor) agrees to:</p>
+<ul>
+  <li>Design and develop the application in accordance with the agreed scope.</li>
+  <li>Produce all documentation deliverables listed above.</li>
+  <li>Execute the test plan and resolve all defects identified prior to handoff.</li>
+  <li>Provide a walkthrough of the completed application to the LTS team.</li>
+</ul>
+
+<!-- Assumptions -->
+<h2>Assumptions</h2>
+<ul>
+  <li>Live payment processing is not required for this engagement; fee calculations are tracked in the database only.</li>
+  <li>The application will be hosted in a development or academic environment for the duration of this project.</li>
+  <li>Authentication is email and password based; OAuth or single sign-on is not required.</li>
+  <li>Browser support targets the latest versions of Chrome, Firefox, Edge, and Safari.</li>
+</ul>
+
+<!-- Signatures -->
+<h2>Signatures</h2>
+<p>By signing below, both parties agree to the scope, deliverables, timeline, and terms defined in this Statement of Work.</p>
+
+<table class="sig-table">
+  <tr>
+    <th>Role</th>
+    <th>Printed Name</th>
+    <th>Signature</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>Client - Legendary Training Services</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Vendor - 321 Consulting</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<div class="page-num">Page 3</div>
+
+</body>
+</html>
