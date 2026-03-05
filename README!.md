@@ -7,6 +7,63 @@ A full-stack web application for automating pet training scheduling, booking, an
 
 ---
 
+---
+
+# ✅ REQUIREMENTS AND HOW THEY ARE MET
+
+---
+
+## Requirement 1 — Admins can generate/view reports and view training bookings
+
+**How to access:**
+1. Run the app (`dotnet run` from `src/LTS.Api`)
+2. Open `http://localhost:5258/login.html`
+3. Click **Create Account**, set Role to **Admin**, fill in name/email/password, click **Register**
+4. You will be automatically logged in and redirected to `http://localhost:5258/admin.html`
+
+**What you will see:**
+- **Bookings tab** — a full table of every training booking across all trainers, filterable by date range and session type
+- **Revenue tab** — gross revenue, platform fees (3%), and trainer payouts broken down by trainer
+- **Business tab** — who the platform owes money to, projected future revenue, and repeat customer list
+- **Offerings Report tab** — all scheduled sessions with at-risk flagging (sessions below minimum enrollment highlighted in yellow)
+- **Pets tab** — all registered pets with breed breakdown
+- **Flagged Reviews tab** — suspicious reviews for admin moderation
+
+---
+
+## Requirement 2 — Trainers can create a profile and schedule lesson times
+
+**How to access:**
+1. Open `http://localhost:5258/login.html`
+2. Click **Create Account**, set Role to **Trainer**, fill in name/email/password, click **Register**
+3. You will be redirected to `http://localhost:5258/trainer.html`
+
+**What you will see:**
+- **Profile tab** — set your display name, bio, specialties, and breed specialties (visible to pet owners on the browse page)
+- **My Sessions tab** — create new class or individual sessions by entering date, time, price, capacity, minimum enrollment, and allowed breeds; view and edit your existing sessions
+- **Packages tab** — bundle multiple sessions into a discounted package for pet owners to purchase
+- **Reviews tab** — view all customer reviews and your average star rating
+
+---
+
+## Requirement 3 — Pet owners can view lesson offerings and book with available trainers
+
+**How to access:**
+1. Open `http://localhost:5258` (the home page — no login required to browse)
+2. To book, either browse as a guest (enter your info at checkout) or create a **Pet Owner** account at `/login.html`
+
+**What you will see:**
+- A card grid of all upcoming classes and individual sessions from all trainers
+- Each card shows trainer name, date/time, price, spots remaining, and star rating
+- Filter by breed, session type, or date range
+- Click **Book Now** on any card, fill in your name/email/phone, and confirm — your spot is reserved instantly
+- **Calendar view** at `/calendar.html` — a full month calendar showing sessions by day with color-coded dots
+- **Packages** section below the main grid — bundled session deals from trainers
+
+---
+
+---
+
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
@@ -32,7 +89,7 @@ A full-stack web application for automating pet training scheduling, booking, an
 # Clone/open the project
 cd src/LTS.Api
 
-# Run the app (auto-creates SQLite DB and seeds data)
+# Run the app (auto-creates tables in MySQL and seeds data)
 dotnet run
 ```
 
@@ -47,10 +104,10 @@ Open your browser to the URL shown (e.g. `http://localhost:5258`).
 | Layer | Technology |
 |-------|------------|
 | Backend | C# / ASP.NET Core 9 Web API |
-| ORM | Entity Framework Core + SQLite |
+| ORM | Entity Framework Core (Pomelo) |
 | Auth | JWT Bearer tokens + BCrypt password hashing |
 | Frontend | Vanilla JavaScript + CSS (no framework) |
-| Database | SQLite (dev) / SQL Server (prod) |
+| Database | MySQL (Heroku / JawsDB) |
 
 ---
 
