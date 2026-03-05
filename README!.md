@@ -1,7 +1,7 @@
 # LTS — Legendary Training Services
 ### Scheduling & Booking System
 
-> Built by **321 Consulting** | UA MIS Program | Spring 2026
+> Built by Evan Cargile | UA MIS Program | Spring 2026
 
 A full-stack web application for automating pet training scheduling, booking, and business reporting. Supports three user roles — **Pet Owner**, **Trainer**, and **Admin** — each with a dedicated experience.
 
@@ -348,4 +348,4 @@ All project documentation lives in `docs/`:
 
 ---
 
-*321 Consulting | UA MIS | Spring 2026*
+*Evan Cargile | UA MIS | Spring 2026*
