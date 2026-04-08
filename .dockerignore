@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/.git/
+**/.cursor/
+*.user
+*.log
+**/appsettings.Development.json
+README!.md
+docs/

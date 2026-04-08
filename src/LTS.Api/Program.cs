@@ -1,18 +1,30 @@
 using System.Text;
+using LTS.Api;
 using LTS.Core;
 using LTS.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
+
+HerokuConfig.UseHerokuPort(builder);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var connectionString = HerokuConfig.TryMysqlConnectionFromAddonUrl()
+    ?? builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException(
+        "No database: set JAWSDB_URL / DATABASE_URL (mysql) on Heroku, or ConnectionStrings:DefaultConnection in config.");
+var envPwd = Environment.GetEnvironmentVariable("LTS_MYSQL_PASSWORD");
+if (!string.IsNullOrWhiteSpace(envPwd))
+{
+    var cb = new MySqlConnectionStringBuilder(connectionString) { Password = envPwd };
+    connectionString = cb.ConnectionString;
+}
 
 builder.Services.AddDbContext<LTSDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
@@ -54,7 +66,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
 app.UseCors();
-app.UseHttpsRedirection();
+if (!HerokuConfig.IsHerokuDyno)
+    app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseAuthentication();
