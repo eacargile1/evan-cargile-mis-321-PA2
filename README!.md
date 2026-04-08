@@ -97,7 +97,7 @@ Open your browser to the URL shown (e.g. `http://localhost:5258`).
 
 > On first run the database is created and seeded with two trainers, sample pets, realistic class times, packages, and bookings.
 
-**Local MySQL:** Copy `src/LTS.Api/appsettings.Development.sample.json` to `appsettings.Development.json`, set your DB password, and ensure database `lts` exists. **GitHub vs Heroku / collaborators:** see [docs/GITHUB_AND_HEROKU.md](docs/GITHUB_AND_HEROKU.md).
+**New to the repo?** Full local setup (MySQL, config file, run, all features): **[docs/LOCAL_QUICKSTART.md](docs/LOCAL_QUICKSTART.md)**. **GitHub vs Heroku:** [docs/GITHUB_AND_HEROKU.md](docs/GITHUB_AND_HEROKU.md).
 
 ---
 
