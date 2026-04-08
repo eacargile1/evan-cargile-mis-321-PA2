@@ -5,6 +5,12 @@
 
 A full-stack web application for automating pet training scheduling, booking, and business reporting. Supports three user roles — **Pet Owner**, **Trainer**, and **Admin** — each with a dedicated experience.
 
+### Live app (Heroku — graders / quick demo)
+
+Open in a browser (no local install): **[https://programming-assignemnt-2-mis32.herokuapp.com](https://programming-assignemnt-2-mis32.herokuapp.com)**
+
+- Home: `/` · Login: `/login.html` · Calendar: `/calendar.html`
+
 ---
 
 ---
