@@ -2,6 +2,63 @@
 
 Do these in order. No Heroku required.
 
+---
+
+## After you pull from GitHub (easy version)
+
+Think of it in three parts: **install tools**, **tell the app how to reach your database**, **start the app**.
+
+1. **Download the project**  
+   You already did this: `git clone …` and you have the folder on your computer.
+
+2. **Install two things** (only if you don’t have them yet)  
+   - **.NET 9** — this is what runs the app. [Get it here](https://dotnet.microsoft.com/download/dotnet/9.0).  
+   - **MySQL** — this is where the app stores data (users, bookings, etc.). [Windows installer](https://dev.mysql.com/downloads/installer/).  
+   When you installed MySQL, you chose a **password** for the main user (often named `root`). **Remember that password.**
+
+3. **Make sure MySQL is running**  
+   On Windows: open **Services** (`Win + R`, type `services.msc`), find **MySQL** (often **MySQL80**), and make sure it says **Running**.
+
+4. **Create an empty database**  
+   Open **MySQL Workbench**, connect with your password, open a **SQL** tab, paste this, click the lightning bolt to run it:
+
+   ```sql
+   CREATE DATABASE IF NOT EXISTS lts
+     CHARACTER SET utf8mb4
+     COLLATE utf8mb4_unicode_ci;
+   ```
+
+   That creates a blank database named **`lts`**. The app will fill in the tables the first time it starts.
+
+5. **Add a small config file the repo does not include**  
+   GitHub **on purpose** does not store your database password. You add it locally:
+
+   - Go inside the project to the folder **`src`** → **`LTS.Api`**.  
+   - Find **`appsettings.Development.sample.json`**.  
+   - **Copy** that file and **rename the copy** to **`appsettings.Development.json`** (same folder).  
+   - Open **`appsettings.Development.json`** in Notepad (or any editor).  
+   - Find **`YOUR_MYSQL_ROOT_PASSWORD_HERE`** and replace it with **the same password you use to log into MySQL Workbench**.  
+   - Save the file.
+
+   If the app still says it can’t connect, try changing the connection line to use **`127.0.0.1`** and the extra bits shown in **step 3** of the detailed section below.
+
+6. **Start the app**  
+   Open **PowerShell** or **Command Prompt**, go to the **`LTS.Api`** folder, and run:
+
+   ```bash
+   cd src/LTS.Api
+   dotnet run
+   ```
+
+   Wait until you see a line that says the app is **listening** and gives a link like **`http://localhost:5258`**.
+
+7. **Open the site in your browser**  
+   Use that link. You should see the training site. Keep the terminal window open while you test; closing it stops the app.
+
+**That’s it.** The first successful run creates the tables and sample data. To see trainer or admin screens, use **Create account** on the login page and pick **Trainer** or **Admin**.
+
+---
+
 ## 1. Install prerequisites
 
 | Tool | Check |
